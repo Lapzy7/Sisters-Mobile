@@ -14,13 +14,14 @@ export default Button;
 const styles = StyleSheet.create({
   button: color => ({
     backgroundColor: color,
-    borderRadius: 8,
+    borderRadius: 100,
     paddingVertical: 12,
   }),
   label: textColor => ({
     textAlign: 'center',
-    fontFamily: 'Poppins-Medium',
-    fontSize: 14,
+    fontFamily: 'CircularStd-Bold',
+    fontSize: 16,
+    padding: 5,
     color: textColor,
   }),
 });

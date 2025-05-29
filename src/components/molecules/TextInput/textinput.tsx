@@ -20,15 +20,18 @@ export default TextInput;
 
 const styles = StyleSheet.create({
   label: {
-    fontFamily: 'Poppins-Regular',
+    fontFamily: 'CircularStd-Medium',
     fontSize: 16,
     marginBottom: 6,
   },
   input: {
     borderWidth: 1,
-    borderColor: '#020202',
-    backgroundColor: '#fff',
-    borderRadius: 8,
-    padding: 10,
+    borderColor: '#F2F9FF',
+    backgroundColor: '#F2F9FF',
+    borderRadius: 5,
+    padding: 12,
+    fontFamily: 'CircularStd-Book',
+    fontSize: 16,
+    color: '#272727',
   },
 });

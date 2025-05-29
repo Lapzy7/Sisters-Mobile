@@ -13,12 +13,13 @@ export default Header;
 
 const styles = StyleSheet.create({
   container: {
-    paddingLeft: 24,
-    paddingVertical: 38,
+    paddingLeft: 27,
+    paddingTop: 100,
     backgroundColor: '#FFFFFF',
   },
   title: {
-    fontFamily: 'Poppins-Medium',
-    fontSize: 22,
+    fontFamily: 'CircularStd-Bold',
+    color: '#272727',
+    fontSize: 32,
   },
 });

@@ -15,6 +15,10 @@
 		6132EF182BDFF13200BBE14D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 6132EF172BDFF13200BBE14D /* PrivacyInfo.xcprivacy */; };
 		7699B88040F8A987B510C191 /* libPods-SistersMobile-SistersMobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-SistersMobile-SistersMobileTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8AB79066604245668845E520 /* CircularStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A60DBD3CBED40E987FB57F4 /* CircularStd-Light.otf */; };
+		22381B207D934956A594D8AA /* CircularStd-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1799C87B7A6C4B7C94F21B20 /* CircularStd-Book.ttf */; };
+		30C7857FAAEC4BF3B510F4D8 /* CircularStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C05C0DC75ACF402CBBE41CFB /* CircularStd-Bold.ttf */; };
+		21C4E2B1605C452EA9B16F46 /* CircularStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A35BDA59B4314AEF82E94F13 /* CircularStd-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SistersMobile/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-SistersMobile-SistersMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SistersMobile-SistersMobileTests.release.xcconfig"; path = "Target Support Files/Pods-SistersMobile-SistersMobileTests/Pods-SistersMobile-SistersMobileTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		2A60DBD3CBED40E987FB57F4 /* CircularStd-Light.otf */ = {isa = PBXFileReference; name = "CircularStd-Light.otf"; path = "../src/assets/fonts/CircularStd-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1799C87B7A6C4B7C94F21B20 /* CircularStd-Book.ttf */ = {isa = PBXFileReference; name = "CircularStd-Book.ttf"; path = "../src/assets/fonts/CircularStd-Book.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C05C0DC75ACF402CBBE41CFB /* CircularStd-Bold.ttf */ = {isa = PBXFileReference; name = "CircularStd-Bold.ttf"; path = "../src/assets/fonts/CircularStd-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A35BDA59B4314AEF82E94F13 /* CircularStd-Medium.ttf */ = {isa = PBXFileReference; name = "CircularStd-Medium.ttf"; path = "../src/assets/fonts/CircularStd-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +133,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				A9459637D28B49619572B4CB /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -150,6 +159,18 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		A9459637D28B49619572B4CB /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				2A60DBD3CBED40E987FB57F4 /* CircularStd-Light.otf */,
+				1799C87B7A6C4B7C94F21B20 /* CircularStd-Book.ttf */,
+				C05C0DC75ACF402CBBE41CFB /* CircularStd-Bold.ttf */,
+				A35BDA59B4314AEF82E94F13 /* CircularStd-Medium.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -247,6 +268,10 @@
 				6132EF182BDFF13200BBE14D /* PrivacyInfo.xcprivacy in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				8AB79066604245668845E520 /* CircularStd-Light.otf in Resources */,
+				22381B207D934956A594D8AA /* CircularStd-Book.ttf in Resources */,
+				30C7857FAAEC4BF3B510F4D8 /* CircularStd-Bold.ttf in Resources */,
+				21C4E2B1605C452EA9B16F46 /* CircularStd-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
