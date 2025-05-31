@@ -5,6 +5,7 @@ import TextInput from '../../components/atoms/TextInput/textinput';
 import Button from '../../components/atoms/Button/button';
 import Gap from '../../components/atoms/Gap/gap';
 import TextAction from '../../components/molecules/TextAction/textaction';
+import BackButton from '../../components/atoms/BackButton/backbutton';
 
 const SignIn = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -19,6 +20,7 @@ const SignIn = ({navigation}) => {
 
   return (
     <View style={styles.pageContainer}>
+      <BackButton onPress={() => {navigation.goBack();}} />
       <Header title="Sign In" />
       <View style={styles.contentContainer}>
         <Gap height={30} />

@@ -1,42 +1,42 @@
 import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
-import { google, facebook } from '../../../assets/icons/SocialIcon';
+import {google, facebook} from '../../../assets/Icons';
 
 const SocialButton = ({
-  onPress, 
+  onPress,
   disabled = false,
   text = 'Continue With Google',
   iconSource = google,
   iconSize = 30,
   backgroundColor = '#F2F9FF',
   textColor = '#272727',
-  borderColor = '#F2F9FF'
+  borderColor = '#F2F9FF',
 }) => {
   return (
-    <TouchableOpacity 
+    <TouchableOpacity
       style={[
-        styles.button(backgroundColor, borderColor), 
-        disabled && styles.buttonDisabled
-      ]} 
-      activeOpacity={0.7} 
+        styles.button(backgroundColor, borderColor),
+        disabled && styles.buttonDisabled,
+      ]}
+      activeOpacity={0.7}
       onPress={onPress}
-      disabled={disabled}
-    >
+      disabled={disabled}>
       <View style={styles.buttonContent}>
         <View style={styles.iconArea}>
-          <Image 
-            source={iconSource} 
+          <Image
+            source={iconSource}
             style={[styles.icon, {width: iconSize, height: iconSize}]}
             resizeMode="contain"
           />
         </View>
-        
+
         <View style={styles.textArea}>
-          <Text style={[styles.label(textColor), disabled && styles.labelDisabled]}>
+          <Text
+            style={[styles.label(textColor), disabled && styles.labelDisabled]}>
             {text}
           </Text>
         </View>
-        
+
         <View style={styles.spacerArea} />
       </View>
     </TouchableOpacity>
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   iconArea: {
-    width: 24, 
+    width: 24,
     alignItems: 'flex-start',
     justifyContent: 'center',
   },
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
   spacerArea: {
     width: 24,
   },
-  label: (textColor) => ({
+  label: textColor => ({
     fontFamily: 'CircularStd-Medium',
     fontSize: 16,
     color: textColor,

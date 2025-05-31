@@ -13,8 +13,8 @@ export default Header;
 
 const styles = StyleSheet.create({
   container: {
-    paddingLeft: 27,
-    paddingTop: 100,
+    marginLeft: 27,
+    marginTop: 100,
     backgroundColor: '#FFFFFF',
   },
   title: {

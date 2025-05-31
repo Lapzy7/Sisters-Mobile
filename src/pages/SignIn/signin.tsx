@@ -6,7 +6,7 @@ import Button from '../../components/atoms/Button/button';
 import Gap from '../../components/atoms/Gap/gap';
 import TextAction from '../../components/molecules/TextAction/textaction';
 import SocialButton from '../../components/atoms/SocialButton/socialbutton';
-import {facebook, google} from '../../assets/icons/SocialIcon';
+import {facebook, google} from '../../assets/Icons';
 
 const SignIn = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -39,7 +39,7 @@ const SignIn = ({navigation}) => {
           onPress={onSubmit}
         />
         <Gap height={20} />
-        <TextAction label={"Dont have an Account ?"} action={"Create One"}/>
+        <TextAction label={'Dont have an Account ?'} action={'Create One'} />
         <Gap height={40} />
         <SocialButton onPress={() => signInWithGoogle()} />
         <SocialButton
