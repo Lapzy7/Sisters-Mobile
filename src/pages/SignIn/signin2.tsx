@@ -1,22 +1,17 @@
 import React, {useState} from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  Alert,
-} from 'react-native';
-import Header from '../../components/molecules/Header/header';
-import TextInput from '../../components/molecules/TextInput/textinput';
+import {StyleSheet, Text, View, TouchableOpacity, Alert} from 'react-native';
+import Header from '../../components/atoms/Header/header';
+import TextInput from '../../components/atoms/TextInput/textinput';
 import Button from '../../components/atoms/Button/button';
 import Gap from '../../components/atoms/Gap/gap';
+import TextAction from '../../components/molecules/TextAction/textaction';
 
 const SignIn = ({navigation}) => {
   const [email, setEmail] = useState('');
 
   const onSubmit = () => {
-    if (email) { 
-      navigation.navigate('SignIn2', {email: email}); 
+    if (email) {
+      navigation.navigate('SignIn2', {email: email});
     } else {
       Alert.alert('Login Failed', 'Please enter your email address.');
     }
@@ -42,13 +37,7 @@ const SignIn = ({navigation}) => {
           onPress={onSubmit}
         />
         <Gap height={20} />
-        <View style={styles.separatorContainer}>
-          <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
-            <Text style={styles.separatorText}>
-              Forgot password? Reset
-            </Text>
-          </TouchableOpacity>
-        </View>
+        <TextAction label={"Forget Password ?"} action={"Reset"} />
       </View>
     </View>
   );

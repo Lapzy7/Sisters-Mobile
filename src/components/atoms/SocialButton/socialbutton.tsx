@@ -2,7 +2,7 @@ import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
 import { google, facebook } from '../../../assets/icons/SocialIcon';
 
-const GoogleButton = ({
+const SocialButton = ({
   onPress, 
   disabled = false,
   text = 'Continue With Google',
@@ -43,7 +43,7 @@ const GoogleButton = ({
   );
 };
 
-export default GoogleButton;
+export default SocialButton;
 
 const styles = StyleSheet.create({
   button: (backgroundColor, borderColor) => ({

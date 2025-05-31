@@ -1,24 +1,19 @@
 import React, {useState} from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  Alert,
-} from 'react-native';
-import Header from '../../components/molecules/Header/header';
-import TextInput from '../../components/molecules/TextInput/textinput';
+import {StyleSheet, Text, View, TouchableOpacity, Alert} from 'react-native';
+import Header from '../../components/atoms/Header/header';
+import TextInput from '../../components/atoms/TextInput/textinput';
 import Button from '../../components/atoms/Button/button';
 import Gap from '../../components/atoms/Gap/gap';
-import GoogleButton from '../../components/atoms/SocialButton/socialbutton';
-import { facebook, google } from '../../assets/icons/SocialIcon';
+import TextAction from '../../components/molecules/TextAction/textaction';
+import SocialButton from '../../components/atoms/SocialButton/socialbutton';
+import {facebook, google} from '../../assets/icons/SocialIcon';
 
 const SignIn = ({navigation}) => {
   const [email, setEmail] = useState('');
 
   const onSubmit = () => {
-    if (email) { 
-      navigation.navigate('SignIn2', {email: email}); 
+    if (email) {
+      navigation.navigate('SignIn2', {email: email});
     } else {
       Alert.alert('Login Failed', 'Please enter your email address.');
     }
@@ -44,16 +39,14 @@ const SignIn = ({navigation}) => {
           onPress={onSubmit}
         />
         <Gap height={20} />
-        <View style={styles.separatorContainer}>
-          <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
-            <Text style={styles.separatorText}>
-              Don't have an Account? Create One
-            </Text>
-          </TouchableOpacity>
-        </View>
+        <TextAction label={"Dont have an Account ?"} action={"Create One"}/>
         <Gap height={40} />
-        <GoogleButton onPress={() => signInWithGoogle()}/>
-        <GoogleButton onPress={() => signInWithFacebook()} iconSource={facebook} text='Continue With Facebook'/>
+        <SocialButton onPress={() => signInWithGoogle()} />
+        <SocialButton
+          onPress={() => signInWithFacebook()}
+          iconSource={facebook}
+          text="Continue With Facebook"
+        />
       </View>
     </View>
   );
@@ -69,13 +62,5 @@ const styles = StyleSheet.create({
   contentContainer: {
     flex: 1,
     paddingHorizontal: 24,
-  },
-  separatorContainer: {
-    paddingLeft: 5,
-  },
-  separatorText: {
-    fontFamily: 'CircularStd-Book',
-    color: '#272727',
-    fontSize: 12,
   },
 });
