@@ -1,54 +1,71 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, Alert} from 'react-native';
+import {StyleSheet, Text, View, Alert} from 'react-native';
 import Header from '../../components/atoms/Header/header';
 import TextInput from '../../components/atoms/TextInput/textinput';
 import Button from '../../components/atoms/Button/button';
 import Gap from '../../components/atoms/Gap/gap';
-import TextAction from '../../components/molecules/TextAction/textaction';
 import BackButton from '../../components/atoms/BackButton/backbutton';
 
-const SignIn = ({navigation}) => {
+const CreateAccount = ({navigation}) => {
+  const [firstname, setFirstname] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const onSubmit = () => {
-    if (password) {
-      navigation.navigate('SignIn', {password: password});
+    if (firstname && lastname && email && password) {
+      navigation.navigate('SignIn2', {email});
     } else {
-      Alert.alert('Login Failed', 'Please enter your password.');
+      Alert.alert('Registration Failed', 'Please fill in all fields.');
     }
   };
 
   return (
     <View style={styles.pageContainer}>
-      <BackButton
-        onPress={() => {
-          navigation.goBack();
-        }}
-      />
-      <Header title="Sign In" />
+      <BackButton onPress={() => navigation.goBack()} />
+      <Header title="Create Account" />
       <View style={styles.contentContainer}>
         <Gap height={30} />
         <TextInput
+          placeholder="Firstname"
+          value={firstname}
+          onChangeText={setFirstname}
+        />
+        <Gap height={20} />
+        <TextInput
+          placeholder="Lastname"
+          value={lastname}
+          onChangeText={setLastname}
+        />
+        <Gap height={20} />
+        <TextInput
+          placeholder="Email Address"
+          value={email}
+          keyboardType="email-address"
+          autoCapitalize="none"
+          onChangeText={setEmail}
+        />
+        <Gap height={20} />
+        <TextInput
           placeholder="Password"
-          securityTextEntry={true}
           value={password}
           onChangeText={setPassword}
+          securityTextEntry={true}
+          autoCapitalize="none"
         />
         <Gap height={20} />
         <Button
-          label="Sign In"
+          label="Continue"
           color="#FFCCE1"
           textColor="white"
           onPress={onSubmit}
         />
-        <Gap height={20} />
-        <TextAction label={'Forget Password ?'} action={'Reset'} />
       </View>
     </View>
   );
 };
 
-export default SignIn;
+export default CreateAccount;
 
 const styles = StyleSheet.create({
   pageContainer: {

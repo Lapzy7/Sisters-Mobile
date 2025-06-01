@@ -39,7 +39,11 @@ const SignIn = ({navigation}) => {
           onPress={onSubmit}
         />
         <Gap height={20} />
-        <TextAction label={'Dont have an Account ?'} action={'Create One'} />
+        <TextAction
+          label={'Dont have an Account ?'}
+          action={'Create One'}
+          onPress={() => navigation.navigate('CreateAccount')}
+        />
         <Gap height={40} />
         <SocialButton onPress={() => signInWithGoogle()} />
         <SocialButton
