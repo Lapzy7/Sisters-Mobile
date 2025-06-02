@@ -42,7 +42,11 @@ const SignIn = ({navigation}) => {
           onPress={onSubmit}
         />
         <Gap height={20} />
-        <TextAction label={'Forget Password ?'} action={'Reset'} />
+        <TextAction
+          label={'Forgot Password ?'}
+          action={'Reset'}
+          onPress={() => navigation.navigate('ForgotPassword')}
+        />
       </View>
     </View>
   );

@@ -1,57 +1,34 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, View, Alert} from 'react-native';
+import {StyleSheet, View, Alert} from 'react-native';
 import Header from '../../components/atoms/Header/header';
 import TextInput from '../../components/atoms/TextInput/textinput';
 import Button from '../../components/atoms/Button/button';
 import Gap from '../../components/atoms/Gap/gap';
 import BackButton from '../../components/atoms/BackButton/backbutton';
 
-const CreateAccount = ({navigation}) => {
-  const [firstname, setFirstname] = useState('');
-  const [lastname, setLastname] = useState('');
+const ForgotPassword = ({navigation}) => {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
 
   const onSubmit = () => {
-    if (firstname && lastname && email && password) {
-      navigation.navigate('SignIn', {email});
+    if (email) {
+      navigation.navigate('ForgotSuccess', {email: email});
     } else {
-      Alert.alert('Registration Failed', 'Please fill in all fields.');
+      Alert.alert('Email not found', 'Please try again.');
     }
   };
 
   return (
     <View style={styles.pageContainer}>
       <BackButton onPress={() => navigation.goBack()} />
-      <Header title="Create Account" />
+      <Header title="Forgot Password" />
       <View style={styles.contentContainer}>
         <Gap height={30} />
         <TextInput
-          placeholder="Firstname"
-          value={firstname}
-          onChangeText={setFirstname}
-        />
-        <Gap height={20} />
-        <TextInput
-          placeholder="Lastname"
-          value={lastname}
-          onChangeText={setLastname}
-        />
-        <Gap height={20} />
-        <TextInput
-          placeholder="Email Address"
+          placeholder="Enter Email Address"
           value={email}
           keyboardType="email-address"
           autoCapitalize="none"
           onChangeText={setEmail}
-        />
-        <Gap height={20} />
-        <TextInput
-          placeholder="Password"
-          value={password}
-          onChangeText={setPassword}
-          securityTextEntry={true}
-          autoCapitalize="none"
         />
         <Gap height={20} />
         <Button
@@ -65,7 +42,7 @@ const CreateAccount = ({navigation}) => {
   );
 };
 
-export default CreateAccount;
+export default ForgotPassword;
 
 const styles = StyleSheet.create({
   pageContainer: {
